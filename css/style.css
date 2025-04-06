@@ -1,0 +1,192 @@
+:root {
+    --red: rgba(224, 0, 0, 0.8);
+    --blue: rgba(58, 170, 235, 0.8);
+    --black: rgba(12, 11, 11, 0.8);
+    --gray: rgba(71, 69, 69, 0.8);
+    --green: rgba(23, 124, 23, 0.8);
+    --white: rgba(255, 255, 255, 0.8);
+    --white-secondary: rgba(242, 240, 239, 1);
+    --border: rgba(54, 54, 54, 0.8);
+    --background: rgba(221, 219, 219, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--black);
+}
+
+body {
+    background: var(--background);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--black);
+    font-size: 0.8vw;
+}
+
+.wrapper {
+    border: solid 1px var(--border);
+    border-radius: 4px;
+    width: 40%;
+    margin: 1vw auto 5vw;
+    background: var(--white-secondary);
+}
+
+#skip {
+    position: absolute;
+    left: -1000px;
+    background-color: var(--gray);
+    padding: 0.8vw;
+    color: var(--white-secondary);
+}
+
+#skip:focus {
+    top: 2vw;
+    left: 32vw;
+}
+
+#banner {
+    background: var(--black) url(../images/banner.jpg) no-repeat center;
+    background-size: cover;
+    height: 15vw;
+}
+
+nav {
+    border-top: solid 1px var(--border);
+    border-bottom: solid 1px var(--border);
+    display: inline-block;
+    width: 100%;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    width: 34%;
+    border-right: solid 1px var(--border);
+}
+
+nav li:last-child {
+    border: none;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 2vw;
+    transition: 0.1s linear;
+}
+
+a[href="index.html"]:hover {
+    background-color: var(--red);
+    color: var(--black);
+}
+
+a[href="green-white.html"]:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+a[href="blue-gray.html"]:hover {
+    background-color: var(--blue);
+    color: var(--gray);
+}
+
+.current[href="index.html"] {
+    background-color: var(--red);
+    color: var(--black);
+}
+
+.current[href="green-white.html"] {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.current[href="blue-gray.html"] {
+    background-color: var(--blue);
+    color: var(--gray);
+}
+
+main > *:first-child {
+    margin-top: 1vw;
+}
+
+main >*:last-child {
+    margin-bottom: 2vw;
+}
+
+.lyric {
+    margin: 0;
+    text-align: center;
+    padding: 1vw 3vw;
+    line-height: 1.5vw;
+}
+
+.tip {
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.grid {
+    padding: 2vw 3vw;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1vw;
+    border-bottom: solid 1px var(--border);
+}
+
+.grid:last-child {
+    border: none;
+}
+
+hr {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.grid img {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: 0.1s linear;
+}
+
+.grid img:active {
+    transform: scale(200%);
+}
+
+.red-black img:nth-child(odd):hover {
+    border: 10px solid var(--red);
+}
+
+.red-black img:nth-child(even):hover {
+    border: 10px solid var(--black);
+}
+
+.green-white img:nth-child(odd):hover {
+    border: 10px solid var(--green);
+}
+
+.green-white img:nth-child(even):hover {
+    border: 10px solid var(--white);
+}
+
+.blue-gray img:nth-child(odd):hover {
+    border: 10px solid var(--blue);
+}
+
+.blue-gray img:nth-child(even):hover {
+    border: 10px solid var(--gray);
+}
